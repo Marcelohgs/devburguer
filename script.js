@@ -130,22 +130,6 @@ addressInput.addEventListener("input", function(event){
 
 checkoutBtn.addEventListener("click", function(){
     const isOpen = checkouRestaurantOpen();
-    if(!isOpen){
-        Toastify({
-            text: "Ops, o restaurante  está fechado!",
-            duration: 3000,
-            close: true,
-            gravity: "top", 
-            position: "right", 
-            stopOnFocus: true, 
-            style: {
-              background: "#ef4444",
-            },
-          }).showToast();
-
-        return;
-    }
-
     if(cart.length === 0) return;
 
     if(addressInput.value === ""){
