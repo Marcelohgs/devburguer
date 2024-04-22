@@ -142,6 +142,8 @@ checkoutBtn.addEventListener("click", function(){
               background: "#ef4444",
             },
           }).showToast();
+
+        //return;
     }
 
     if(cart.length === 0) return;
@@ -155,7 +157,7 @@ checkoutBtn.addEventListener("click", function(){
     //Enviar o pedido para api whats
     const cartItems = cart.map((item)=>{
         return (`
-            ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} `
+            ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price.toFixed(2)} `
         )
     }).join("")
 
